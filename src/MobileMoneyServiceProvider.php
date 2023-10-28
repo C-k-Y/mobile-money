@@ -26,9 +26,11 @@ class MobileMoneyServiceProvider extends ServiceProvider
 
     private function requireHelperScripts()
     {
-        $files = glob(__DIR__ . '/Support/*.php');
+        $files = glob(__DIR__ . '/Support/*.php');    /** 获取当前路径下的所有.php文件 **/
         foreach ($files as $file) {
-            include_once $file;
+            /** include_once 是 PHP 的一个函数，用于将指定文件包含进当前脚本执行。
+            include_once $file 将根据变量 $file 的值，将每个文件路径进行包含 **/
+            include_once $file;           
         }
     }
 }
