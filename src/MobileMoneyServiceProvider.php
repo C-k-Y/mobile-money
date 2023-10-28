@@ -15,8 +15,8 @@ class MobileMoneyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(MpesaServiceProvider::class);
-        $this->app->register(EquityServiceProvider::class);
+        $this->app->register(MpesaServiceProvider::class);    /** 将MpesaServiceProvider注册到应用程序 **/
+        $this->app->register(EquityServiceProvider::class);    /** 将EquityServiceProvider注册到应用程序 **/
     }
 
     public function boot()
